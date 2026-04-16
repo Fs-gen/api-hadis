@@ -1,6 +1,6 @@
-# Hadithly API 📖
+# API Hadis 📖
 
-Hadithly API adalah sebuah RESTful API yang dibuat menggunakan **Next.js 16 (App Router)** untuk menyediakan akses ke berbagai kumpulan hadis dari kitab-kitab ternama beserta sistem klasifikasi topiknya. API ini mengambil data secara statis melalui file JSON lokal yang diproses dengan performa tinggi.
+API Hadis adalah sebuah RESTful API yang dibuat menggunakan **Next.js 16 (App Router)** untuk menyediakan akses ke berbagai kumpulan hadis dari kitab-kitab ternama beserta sistem klasifikasi topiknya. API ini mengambil data secara statis melalui file JSON lokal yang diproses dengan performa tinggi.
 
 ## 🚀 Instalasi & Menjalankan Projek
 
