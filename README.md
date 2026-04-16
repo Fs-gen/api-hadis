@@ -105,27 +105,33 @@ Mengembalikan satu hadis spesifik berdasarkan nama kitab beserta urutan nomor ha
   ```
 
 ### 4. Data Topik Hadis
-Mengembalikan seluruh data topik atau mencari topik spesifik berdasarkan query. Data ini diambil langsung dari `topik.json`. 
+Mengembalikan daftar seluruh nama topik atau mencari detail hadis dalam topik spesifik menggunakan query.
 
-- **URL:** `/topik` atau `/topik?name={nama-topik}`
+- **URL:** `/topik` (Daftar Nama) atau `/topik?name={nama-topik}` (Detail)
 - **Metode:** `GET`
-- **Contoh Request:** `/topik?name=Akhlak`
-- **Contoh Respons:**
+- **Contoh Respons (Daftar - `/topik`):**
+  ```json
+  {
+    "code": 200,
+    "message": "Success",
+    "data": [
+      { "name": "Akhlak", "total": 245 },
+      { "name": "Puasa", "total": 112 }
+    ]
+  }
+  ```
+- **Contoh Request Detail:** `/topik?name=Akhlak`
+- **Contoh Respons Detail:**
   ```json
   {
     "code": 200,
     "message": "Success",
     "data": {
       "name": "Akhlak",
+      "total": 245,
       "hadiths": [
-        {
-          "kitab": "abu-daud",
-          "nomor": 935
-        },
-        {
-          "kitab": "ahmad",
-          "nomor": 10
-        }
+        { "kitab": "abu-daud", "nomor": 935 },
+        { "kitab": "ahmad", "nomor": 10 }
       ]
     }
   }

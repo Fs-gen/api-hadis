@@ -128,25 +128,29 @@ export default function Home() {
               <span className="px-3 py-1 text-xs font-bold rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">GET</span>
               <code className="text-sm font-mono text-slate-800 dark:text-zinc-200 bg-slate-100 dark:bg-zinc-800 px-2 py-1 rounded">/topik</code>
             </div>
-            <h3 className="text-xl font-bold mb-2">Topik Hadis</h3>
+            <h3 className="text-xl font-bold mb-2">Daftar & Detail Topik</h3>
             <p className="text-slate-600 dark:text-zinc-400 text-sm mb-6 flex-1">
-              Mencari hadis berdasarkan kategori topik tertentu, berisi pemetaan indeks kitab dan nomor hadis yang sesuai dengan topik tesebut.
+              Secara default mengembalikan daftar seluruh nama topik. Gunakan query <code className="bg-slate-100 dark:bg-zinc-800 px-1 rounded">?name=NamaTopik</code> untuk mendapatkan detail hadis di dalam topik tersebut.
             </p>
             <div className="w-full bg-slate-950 rounded-xl p-4 overflow-x-auto border border-slate-800">
               <pre className="text-xs text-orange-400 font-mono">
                 {`{
   "code": 200,
-  "data": {
-    "Akhlak": [
-      { "kitab": "ahmad", "nomor": 10 }
-    ]
-  }
+  "data": [
+    { "name": "Akhlak", "total": 150 },
+    { "name": "Puasa", "total": 85 }
+  ]
 }`}
               </pre>
             </div>
-            <a href="/topik?name=Akhlak" target="_blank" className="mt-4 text-sm font-medium text-emerald-500 hover:text-emerald-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              Coba Endpoint →
-            </a>
+            <div className="flex gap-4 mt-4">
+              <a href="/topik" target="_blank" className="text-sm font-medium text-emerald-500 hover:text-emerald-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                List Topik →
+              </a>
+              <a href="/topik?name=Akhlak" target="_blank" className="text-sm font-medium text-emerald-500 hover:text-emerald-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Detail →
+              </a>
+            </div>
           </div>
 
         </section>
