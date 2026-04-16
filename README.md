@@ -138,6 +138,9 @@ Mengembalikan seluruh data topik atau mencari topik spesifik berdasarkan query. 
 - **TypeScript** - Untuk *type safety*
 - **Node.js `fs/promises`** - Handling file statis lokal
 
+## 🗃 Sumber Data
+Data hadis dalam proyek ini bersumber dari repository: [gadingnst/hadith-api](https://github.com/gadingnst/hadith-api/). Terima kasih kepada pengembang aslinya atas penyediaan data yang luar biasa ini.
+
 ## ⚙ Struktur Folder
 ```text
 ├── app/

@@ -153,9 +153,12 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-16 pt-8 border-t border-slate-200 dark:border-zinc-800 text-center text-slate-500 dark:text-zinc-500 text-sm">
-          <p>
+          <p className="mb-2">
             Dibuat dengan ❤️ untuk kemudahan akses informasi Islam. <br />
             Proyek ini bersifat open source dan bebas untuk digunakan.
+          </p>
+          <p className="text-xs opacity-75">
+            Sumber Data: <a href="https://github.com/gadingnst/hadith-api/" target="_blank" rel="noreferrer" className="underline hover:text-emerald-500 transition-colors">gadingnst/hadith-api</a>
           </p>
         </footer>
       </main>
